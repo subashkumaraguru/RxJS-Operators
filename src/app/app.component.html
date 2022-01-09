@@ -1,0 +1,31 @@
+<mat-radio-group color="primary" class="radio-grp" aria-label="Select an option" [formControl]="radioBtn" (change)="onSelectionChange($event)">
+  <mat-radio-button value="combineLatest">combineLatest</mat-radio-button>
+  <mat-radio-button value="withLatestFrom">withLatestFrom</mat-radio-button>
+</mat-radio-group>
+
+<div class="app-ctr">
+  <button color="primary"  class="sourceA-name button" #sourceA mat-button>Source 1</button>
+  <div class="sourceA">
+  </div>
+  
+  
+  <button color="primary"  #sourceB  class="sourceB-name button" mat-button>
+    Source 2
+  </button>
+  <div class="sourceB">
+  
+  </div>
+  
+  <div class="selected-operator">
+    selected Operator: {{radioBtn.value}}
+  </div>
+  
+  <div  class="output-name ">Output</div>
+  <div class="output-stream">
+  </div>
+</div>
+
+
+<div class="reset">
+  <button (click)="resetStreams()" mat-button> Reset Source </button>
+</div>
